@@ -1,4 +1,4 @@
-require './nesting'
+require_relative './nesting'
 require 'minitest/autorun'
 require 'minitest/pride'
 
@@ -16,7 +16,6 @@ require 'minitest/pride'
 class NestedTest < MiniTest::Test
 
   def test_list_of_olive_garden_employess
-    skip
     #^^^ Un-Skip each test
     #=======================
     # EXAMPLE
@@ -26,17 +25,15 @@ class NestedTest < MiniTest::Test
   end
 
   def test_pancake_ingredients
-    skip
     #=======================
-    # pancake_ingredients = <your code here>
+    pancake_ingredients = stores[:dennys][:dishes][0][:ingredients]
     #=======================
     assert_equal ["Flour", "Eggs", "Milk", "Syrup"], pancake_ingredients
   end
 
   def test_rissotto_price
-    skip
     #=======================
-    # risotto_price = <your code here>
+    risotto_price = 
     #=======================
     assert_equal 12, risotto_price
   end
